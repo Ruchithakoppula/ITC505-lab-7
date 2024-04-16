@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>Mad Lib</title>
     <style>
+        @import url('https://fonts.cdnfonts.com/css/encode-sans-sc');
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Encode Sans SC', sans-serif;                                    
             background-color: #91D8E4;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            padding: 25px;
             margin: 0;
         }
 
@@ -23,6 +25,9 @@
             width: 100%;
         }
 
+        h1,p{
+            font-family: 'Encode Sans SC', sans-serif;
+                                                
         h2 {
             text-align: center;
             color: #333;
@@ -65,6 +70,7 @@
     </style>
 </head>
 <body>
+    <div>
     <form action="/cs212/homework/8" method="post">
         <h2>Create Your Mad Lib</h2>
 
@@ -85,5 +91,57 @@
 
         <input type="submit" value="Create Mad Lib">
     </form>
+        </div>
+
+    <div>
+        <h1>ADDENDUM</h1>
+        <h2><b>HTML Frontend:</b></h2>
+<P>
+<ul>
+    <li>There's an HTML form specifically crafted for submitting Mad Lib stories. Users input various parts of speech (adjective, plural noun, person's name, verb, noun), which are then sent to the server.</li>
+    <li>The form's appearance is enhanced with CSS for better visual appeal and user experience, including responsive input fields and buttons.</li>
+</ul>
+</P> 
+<h2><b>Server Setup:</b></h2>
+<p>
+    <ul>
+<li>The server is configured using Express, a widely-used Node.js framework tailored for building web applications and APIs.</li>
+<li>Routes are established for serving the HTML form (GET request) and managing the form submission (POST request).</li>
+<li>The POST route processes the submitted data and constructs a Mad Lib story based on the user's inputs.</li>
+    </ul>
+        </p>
+<h2><b>Package Configuration:</b></h2>
+<p>
+    <ul>
+<li>The package.json and package-lock.json files outline dependencies and other settings essential for running the application.</li>
+<li>Express version 4.18.2 is specified as a dependency, and the server is initiated using a start script defined in package.json.</li>
+    </ul>
+        </p>
+<h2><b>File Structure:</b></h2>
+<p>
+    <ul>
+<li>The use of the path module suggests that HTML files are served from a directory relative to the server script, utilizing paths to ensure proper file location regardless of execution context.</li>
+    </ul>
+        </p>
+<h2><b>Potential Enhancements/Additions:</b></h2>
+<p>
+    <ul>
+<li>Error Handling: Incorporating error handling on the server side to address scenarios where the form data may not be transmitted correctly.</li>
+<li>User Feedback: Implementing client-side JavaScript to validate inputs prior to submission and provide immediate feedback to users.</li>
+<li>Further Development: Consider expanding the application's capabilities to support multiple Mad Lib templates or storing user-generated Mad Libs in a database for future access.</li>
+    </ul>
+        </p>
+    </div>
+<div>
+     <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</div>
 </body>
 </html>
